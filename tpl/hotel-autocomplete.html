@@ -1,0 +1,13 @@
+<div class="hotel_autocomplete" ng-keydown="autocompleteCtrl.keyDownHandler($event)">
+	<input type="text" class="hotel_autocomplete_search_input form-control" placeholder="Search hotel..." ng-change="autocompleteCtrl.search()" ng-model="autocompleteCtrl.query" ng-focus="autocompleteCtrl.needShowHotels = true" ng-blur="autocompleteCtrl.needShowHotels = false" ng-keydown="autocompleteCtrl.needShowHotels = true">
+
+	<div class="hotel_autocomplete_show_hotel btn btn-primary" ng-click="autocompleteCtrl.showSelectedHotel()">Show</div>
+
+	<ul class="hotel_autocomplete_hotels list-unstyled" ng-show="autocompleteCtrl.needShowHotels && autocompleteCtrl.hotels.length">
+		<li ng-repeat="hotel in autocompleteCtrl.hotels" ng-mousedown="autocompleteCtrl.selectHotel(hotel)" ng-class="{active: $index == autocompleteCtrl.activeHotelIndex}">
+			<div class="hotel_autocomplete_hotel"><span class="hotel_autocomplete_stars">{{ hotel.stars }}</span> {{ hotel.name }} <strong class="hotel_autocomplete_iso2">{{ hotel.iso2 }}</strong></div>
+		</li>
+	</ul>
+
+	<pre class="hotel_autocomplete_selected_hotel_info" ng-show="autocompleteCtrl.needShowSelectedHotel">{{ autocompleteCtrl.selectedHotel | json }}</pre>
+</div>

@@ -1,0 +1,50 @@
+.hotel_autocomplete {
+	max-width: 700px;
+	min-width: 200px;
+	width: 700px;
+	margin: 20px auto;
+}
+
+.hotel_autocomplete_search_input {
+	width: calc(100% - 75px);
+	float: left;
+}
+
+.hotel_autocomplete_hotels {
+	width: calc(100% - 75px);
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	float: left;
+}
+
+.hotel_autocomplete_hotels li:hover,
+.hotel_autocomplete_hotels li.active {
+	background-color: rgba(102,175,233,.6);
+}
+
+.hotel_autocomplete_hotel {
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+}
+
+.hotel_autocomplete_stars {
+	padding: 0 10px 0 0;
+}
+
+.hotel_autocomplete_stars:before {
+	content: "★";
+}
+
+.hotel_autocomplete_show_hotel {
+	float: right;
+}
+
+.hotel_autocomplete_selected_hotel_info {
+	width: 100%;
+	float: left;
+	margin: 10px 0 0 0;
+}
+
+.hotel_autocomplete_iso2 {
+	float: right;
+}

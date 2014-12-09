@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Tasks</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/hotel.autocomplete.css">
+	<link rel="stylesheet" href="css/custom.selectbox.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/angular.min.js"></script>
+	<script src="js/custom.selectbox.js"></script>
+	<script src="js/hotel.autocomplete.module.js"></script>
+	<script src="js/hotel.autocomplete.controller.js"></script>
+	<script src="js/hotel.autocomplete.directive.js"></script>
+	<script src="js/tabs.module.js"></script>
+	<script src="js/tabs.controller.js"></script>
+	<script src="js/tabs.directive.js"></script>
+	<script src="js/app.module.js"></script>
+</head>
+<body>
+	<div class="container" ng-controller="TabsController as tabsCtrl">
+		<tabs></tabs>
+
+		<div ng-show="tabsCtrl.tab == 1">
+			<hotel-autocomplete></hotel-autocomplete>
+		</div>
+
+		<div ng-show="tabsCtrl.tab == 2">
+			<select name="countries" id="countries">
+				<option value="Russia">Россия</option>
+				<option value="Egypt">Египет</option>
+				<option value="Turkey">Турция</option>
+				<option value="Vietnam">Вьетнам</option>
+				<option value="Israel" disabled>Израиль</option>
+				<option value="Indonesia">Индонезия</option>
+				<option value="Jordan">Иордания</option>
+				<option value="Dominican Republic">Доминикана</option>
+				<option value="Cyprus">Кипр</option>
+				<option value="China">Китай</option>
+				<option value="Cuba" selected>Куба</option>
+				<option value="Mauritius">Маврикий</option>
+				<option value="Maldives">Мальдивы</option>
+				<option value="Morocco">Марокко</option>
+				<option value="Mexico">Мексика</option>
+				<option value="Thailand">Таиланд</option>
+				<option value="Sri Lanka">Шри-Ланка</option>
+				<option value="UAE" disabled>ОАЭ</option>
+				<option value="Tunisia">Тунис</option>
+				<option value="Seychelles" disabled>Сейшелы</option>
+				<option value="Montenegro">Черногория</option>
+				<option value="Jamaica">Ямайка</option>
+			</select>
+		</div>
+	</div>
+</body>
+</html>
